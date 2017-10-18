@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DSE.ObjectClone</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>DanSeracu</authors>
+    <owners>DanSeracu</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Clone DeepClone</tags>
+  </metadata>
+</package>
