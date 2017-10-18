@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ObjectCloneTest.Models;
 using ObjectClone;
 using Newtonsoft.Json;
@@ -7,13 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Text;
+using Xunit;
 
 namespace ObjectCloneTest
 {
-    [TestClass]
     public class ObjectCloneTest : TestBase
     {
-        [TestMethod]
+        [Fact]
         public void SingleShallowObject_CloneSuccesful()
         {
 
@@ -30,7 +29,7 @@ namespace ObjectCloneTest
 
         }
 
-        [TestMethod]
+        [Fact]
         public void SingleComplexObject_CloneSuccesful()
         {
             var user = new User
@@ -45,7 +44,7 @@ namespace ObjectCloneTest
             ValidateObjects(user, clone);
         }
 
-        [TestMethod]
+        [Fact]
         public void SingleComplexObject_WithList_CloneSuccesful()
         {
             var report = new DayReport

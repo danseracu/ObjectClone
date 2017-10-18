@@ -1,0 +1,5 @@
+language: csharp
+solution: ObjectClone.sln
+script:
+- xbuild ObjectClone.sln
+- mono ./packages/xunit.runner.console*/tools/net452/xunit.console.exe ./ObjectCloneTest/bin/Debug/ObjectClone.dll

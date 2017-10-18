@@ -1,10 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace ObjectCloneTest
 {
@@ -13,9 +14,9 @@ namespace ObjectCloneTest
 
         protected void ValidateObjects(object objectA, object objectB)
         {
-            Assert.AreEqual(JsonConvert.SerializeObject(objectA), JsonConvert.SerializeObject(objectB));
-            Assert.AreNotEqual(objectA.GetHashCode(), objectB.GetHashCode());
-            Assert.IsFalse(ReferenceEquals(objectA, objectB));
+            Assert.Equal(JsonConvert.SerializeObject(objectA), JsonConvert.SerializeObject(objectB));
+            Assert.NotEqual(objectA.GetHashCode(), objectB.GetHashCode());
+            Assert.False(ReferenceEquals(objectA, objectB));
         }
 
     }

@@ -1,19 +1,17 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ObjectCloneTest.Models;
 using ObjectClone;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using Xunit;
 
 
 namespace ObjectCloneTest
 {
-    [TestClass]
     public class ListCloneTest : TestBase
     {
-
-        [TestMethod]
+        [Fact]
         public void MultipleShallowObjects_CloneSuccesful()
         {
             var addresses = new List<Address>
@@ -27,7 +25,7 @@ namespace ObjectCloneTest
             ValidateObjects(addresses, clone);
         }
 
-        [TestMethod]
+        [Fact]
         public void MultipleComplexObjects_CloneSuccesful()
         {
             var users = new List<User>();
@@ -44,7 +42,7 @@ namespace ObjectCloneTest
             ValidateObjects(users, users.DeepCloneList<User, List<User>>());
         }
 
-        [TestMethod]
+        [Fact]
         public void MultipleComplexObjects_WithLists_CloneSuccesful()
         {
             var reports = new List<DayReport>();
